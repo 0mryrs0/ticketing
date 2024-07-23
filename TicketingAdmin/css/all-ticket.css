@@ -1,0 +1,8 @@
+.click {
+    cursor: pointer;
+    transition: opacity 0.15s;
+}
+
+.click:hover {
+    opacity: 0.6;
+}

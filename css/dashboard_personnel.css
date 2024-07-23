@@ -1,0 +1,16 @@
+.box {
+    margin-right: 100px; /* Adjust margin as needed */
+    width: 100%;
+}
+
+.container {
+    width: 100%; /* Set width to 100% to ensure responsiveness */
+}
+
+.w-100 {
+    width: 100%; /* Adjust width as needed */
+}
+
+.content{
+    margin-left: 8rem;
+}

@@ -1,0 +1,23 @@
+                                  <?php
+                                    $newquery = "SELECT email_address FROM personnel WHERE privileges='Admin'";
+                                    $newresult = mysqli_query($conn, $newquery);
+
+                                    // Check if any email addresses are found
+                                    if(mysqli_num_rows($newresult) > 0) {
+                                    // Array to store email addresses
+                                    $emailAddresses = array();
+
+                                    // Fetch email addresses and store them in the array
+                                    while ($newfetch = mysqli_fetch_array($result)) {
+                                    $emailAddresses[] = $newfetch['email_address'];
+                                    }
+
+                                    // URL encode the email addresses
+                                    $encodedRecipients = implode(",", array_map('urlencode', $emailAddresses));
+                                  ?>
+                                    
+                                    <a type="button" href="javascript:void(0)" onclick="composeEmail('<?php echo $encodedRecipients; ?>')" class="btn btn-primary mb-5">Send an email</a>
+      
+                                  <?php
+                                  } 
+                                  ?>
